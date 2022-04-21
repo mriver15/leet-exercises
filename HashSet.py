@@ -1,3 +1,6 @@
+# Michael Rivera
+# Simple HashSet implementation WIP
+
 class HashSet:
     def __init__(self) -> None:
         self.set = []
