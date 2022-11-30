@@ -14,15 +14,22 @@ import math
 #     return
 
 def getTermIndexes(nums, target):
-    for (i,k) in enumerate(nums):
-        for (j,k2) in enumerate(nums):
-            if j > i:
-                if k + k2 == target:
-                    return [i,j]
-    return []
+ #         Use Dict to initiate Hashmap
+        hMap = {}
+
+#     For every element in the list
+        for (i,k) in enumerate(nums):
+#         If the complement of the target minus the element value exists in the hash, already found match, return indexes
+            if target - k in hMap:
+                return hMap[target - k], i
+            else:
+#                 Add calculated complement to target to hashmap
+                hMap[k] = i
+#     If Not found return empty list
+        return []
 
 def main():
-    nums = [2,7,11,15,3]
+    nums = [2,4,11,15,5]
     target = 9
 
     print(getTermIndexes(nums,target))
