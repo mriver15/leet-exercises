@@ -1,4 +1,4 @@
-# Testing Sets and Lists
+# Unique count of occurrences challenge
 
 def isUnique(arr):
     # Use dict to keep track of repeats on @arr
